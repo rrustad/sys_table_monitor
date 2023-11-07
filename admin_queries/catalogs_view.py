@@ -9,3 +9,11 @@ spark.sql(f"""
 create or replace view {target_schema}.catalogs as
 select * from system.information_schema.catalogs
           """)
+
+# COMMAND ----------
+
+spark.sql(f'select * from {target_schema}.catalogs_v')
+
+# COMMAND ----------
+
+
