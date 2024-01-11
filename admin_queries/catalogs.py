@@ -24,6 +24,22 @@ catalogs = requests.get(url + '/api/2.1/unity-catalog/catalogs', headers=_token)
 
 # COMMAND ----------
 
+import json
+data = {
+"name": "kp_catalog_",
+"owner": "riley.rustad@databricks.com",
+"comment": "",
+"isolation_mode": "OPEN"
+}
+
+r = requests.patch(url + '/api/2.1/unity-catalog/catalogs/kp_catalog', headers=_token,data=json.dumps(data))
+
+# COMMAND ----------
+
+r.json()
+
+# COMMAND ----------
+
 catalogs
 
 # COMMAND ----------

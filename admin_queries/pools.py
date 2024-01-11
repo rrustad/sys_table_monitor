@@ -40,4 +40,8 @@ pools_df.write.mode('overwrite').saveAsTable(f'{target_schema}.pools')
 
 # COMMAND ----------
 
+spark.createDataFrame(pd.DataFrame(pools['instance_pools'])).display()
+
+# COMMAND ----------
+
 
